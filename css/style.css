@@ -1,0 +1,168 @@
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Dark-gray-light: hsla(0, 2%, 78%, 0.623);
+    --Font-size-name-and-stats: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* typography */
+
+.name h1,
+.name p {
+    font-size: var(--Font-size-name-and-stats);
+}
+
+h1,
+h2 {
+    color: var(--Very-dark-desaturated-blue);
+}
+
+p {
+    color: var(--Dark-gray);
+}
+
+.stat p {
+    font-size: 0.725rem;
+    letter-spacing: 2px;
+}
+
+
+/* main */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--Dark-cyan);
+    overflow: hidden;
+}
+
+.bg-top {
+    position: absolute;
+    z-index: -1;
+    right: 50%;
+    bottom: 50%;
+}
+
+.bg-bottom {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 95%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px 0 var(--Dark-grayish-blue);
+    margin-bottom: 2em;
+}
+
+@media (min-width:375px) {
+    .main {
+        width: 20.75em;
+        overflow: hidden;
+    }
+}
+
+.name-stat {
+    width: 100%;
+    padding-top: 3em;
+}
+
+.img-div {
+    background-image: url(../images/bg-pattern-card.svg);
+    position: relative;
+    height: 130px;
+}
+
+.name-stat {
+    background-color: #fff;
+}
+
+.profile {
+    border: #fff solid 5px;
+    border-radius: 100%;
+    position: absolute;
+    margin: auto;
+    bottom: -40%;
+    left: 0;
+    right: 0;
+}
+
+.name-stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.loc {
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+    font-weight: 400;
+}
+
+.stat-card {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: var(--Dark-gray-light) solid 1px;
+    width: 100%;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+h1+p {
+    margin-left: 0.5em;
+    font-weight: 700;
+}
+
+h2+p {
+    margin-top: 0.5em;
+}
