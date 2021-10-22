@@ -93,12 +93,18 @@ body {
     margin-bottom: 2em;
 }
 
+
+/* mobile view */
+
 @media (min-width:375px) {
     .main {
         width: 20.75em;
         overflow: hidden;
     }
 }
+
+
+/* card style */
 
 .name-stat {
     width: 100%;
